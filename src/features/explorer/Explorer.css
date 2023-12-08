@@ -1,0 +1,9 @@
+.file-container {
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    /* Prevent content from wrapping to the next line */
+    max-width: 100%;
+    /* Adjust the maximum width as needed */
+
+}

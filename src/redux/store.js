@@ -1,8 +1,21 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 import fileSystemReducer from './fileSystemSlices';
 
-export default configureStore({
+const persistConfig = {
+    key: 'root',
+    storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, fileSystemReducer);
+
+const store = configureStore({
     reducer: {
-        fileSystem: fileSystemReducer,
+        fileSystem: persistedReducer,
     },
 });
+
+const persistor = persistStore(store);
+
+export { store, persistor };

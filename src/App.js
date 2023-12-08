@@ -1,23 +1,24 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './App.css';
-import Explorer from './features/explorer/explorer';
+import './styles/App.css';
 import FileEditor from './features/FileEditor/FileEditor';
+import Explorer from './features/explorer/Explorer';
+
 
 function App() {
   // Access the state from the 'fileSystem' slice
   const fileSystemState = useSelector((state) => state.fileSystem);
 
   return (
-    <div className="container-fluid">
-      <div className="row">
+    <div className="container-fluid" style={{ height: '100vh' }}>
+      <div className="row" style={{ height: '100%' }}>
         {/* Explorer Sidebar (35% width) */}
-        <div className="col-md-3 bg-light p-3">
+        <div className="col-md-3 bg-light p-3" style={{ height: '70vh', overflowY: 'auto' }}>
           <Explorer />
         </div>
 
         {/* Content Area (65% width) */}
-        <div className="col-md-9 p-3">
+        <div className="col-md-9 p-3" style={{ height: '75vh' }}>
           {/* Placeholder for content */}
           <FileEditor />
         </div>
