@@ -31,7 +31,7 @@ const FileEditor = () => {
     return (
         <div className="bg-light p-3" style={{ height: '100%' }}>
             <h1 className='py-3'>{currentFile ? currentFile.title : ""}</h1>
-            {errorMSg != "" ? <p>{errorMSg}</p> :
+            {errorMSg !== "" ? <p>{errorMSg}</p> :
                 <textarea
                     value={content}
                     onChange={(e) => setContent(e.target.value)}

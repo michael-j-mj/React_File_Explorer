@@ -11,7 +11,7 @@ const ItemForm = ({ files, editing, onSubmit, inputRef, onCancel, item }) => {
 
     const handleValidate = () => {
         const parentId = editing?.parentId ?? item?.parentId;
-        const type = editing?.type ?? item?.type;
+
 
         if (itemName.trim() === '') {
             handleCancel();

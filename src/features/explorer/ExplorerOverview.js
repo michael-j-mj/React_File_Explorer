@@ -13,7 +13,7 @@ const Explorer = () => {
     const [editing, setEditing] = useState({});
     const [transferId, setTransferId] = useState({});
     useEffect(() => {
-        if (editing.parentId != null || editing.renameId != null) {
+        if (editing.parentId !== null || editing.renameId !== null) {
             inputRef.current.focus();
         }
     }, [editing]);
@@ -81,12 +81,12 @@ const Explorer = () => {
         }
     };
     const handleFileMove = (type) => {
-        if (selectedId != 0) {
+        if (selectedId !== 0) {
             setTransferId({ id: selectedId, type: type });
         }
     }
     const handlePaste = () => {
-        if (transferId.type == "move" && transferId.id === selectedId) { //moving to it self
+        if (transferId.type === "move" && transferId.id === selectedId) { //moving to it self
             return;
         }
         const destination = fileSystemState.files[selectedId].type === "file" ? fileSystemState.files[selectedId].parentId : selectedId;

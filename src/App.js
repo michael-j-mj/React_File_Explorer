@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+
 import './styles/App.css';
 import FileEditor from './features/FileEditor/FileEditor';
 import Explorer from './features/explorer/ExplorerOverview';
@@ -7,7 +7,7 @@ import Explorer from './features/explorer/ExplorerOverview';
 
 function App() {
   // Access the state from the 'fileSystem' slice
-  const fileSystemState = useSelector((state) => state.fileSystem);
+
 
   return (
     <div className="container-fluid" style={{ height: '100vh' }}>

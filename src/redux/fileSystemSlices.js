@@ -36,7 +36,7 @@ export const fileSystemSlice = createSlice({
         open: action.payload.open ?? false,
         type: action.payload.type,
         parentId: action.payload.parentId,
-        content: action.payload.type == "folder" ? null : getInitialContent(action.payload.title),
+        content: action.payload.type === "folder" ? null : getInitialContent(action.payload.title),
         children: [],
       };
       state.files[fileSystem.parentId].children.push(fileSystem.id);
@@ -105,11 +105,15 @@ export const fileSystemSlice = createSlice({
 
 const getTitle = (state, fromId, toId) => {
   let title = state.files[fromId].title;
-  while (state.files[toId].children.some(childId => state.files[childId].title === title)) {
-    title = ("copy-") + title;
+  let newTitle = title;
+  const boolUniqueChild = () => state.files[toId].children.some(childId => state.files[childId].title === newTitle);
+  while (boolUniqueChild()) {
+    newTitle = "copy-" + newTitle;
   }
-  return title;
+
+  return newTitle;
 };
+
 const copyFolder = (state, sourceFolderId, destinationFolderId, title) => {
   const idMapping = {}; // Map old node IDs to new node IDs
   const copiedNodes = []; // Array to store deep copies of nodes
@@ -127,7 +131,7 @@ const copyFolder = (state, sourceFolderId, destinationFolderId, title) => {
     // Check if the node has children before attempting to iterate
     if (node.children) {
       node.children.forEach(childId => {
-        const copiedChildId = deepCopyNode(childId, idMapping[nodeId]);
+        deepCopyNode(childId, idMapping[nodeId]);
         queue.push(childId); // Enqueue for further processing
       });
     }
