@@ -13,7 +13,7 @@ const Explorer = () => {
     const [editing, setEditing] = useState({});
     const [transferId, setTransferId] = useState({});
     useEffect(() => {
-        if (editing.parentId !== null || editing.renameId !== null) {
+        if (editing.parentId != null || editing.renameId != null) {
             inputRef.current.focus();
         }
     }, [editing]);
