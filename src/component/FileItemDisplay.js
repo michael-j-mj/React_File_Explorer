@@ -7,22 +7,19 @@ const FileItem = ({ item, depth, onClick }) => {
 
     return (
         <div key={item.id} style={{ marginLeft: depth }} className="explorer-item">
-            {/* Use conditional rendering for arrow or file icon */}
             {item.type === 'folder' || item.type === 'folder-root' ? (
-                <button >
-                    {item.open ? (
-                        <i className="bi bi-caret-down-fill"></i> // Bootstrap down arrow
-                    ) : (
-                        <i className="bi bi-caret-right-fill"></i> // Bootstrap right arrow
-                    )}
-                </button>
+                item.open ? (
+                    <i className="bi bi-caret-down-fill"></i>
+                ) : (
+                    <i className="bi bi-caret-right-fill"></i>
+                )
             ) : (
-                <i className="bi bi-file-earmark"></i> // Bootstrap file icon
+                <i className={item.type === 'folder' ? 'bi bi-folder' : 'bi bi-file-earmark'}></i>
             )}
-
             <span>{item.title}</span>
         </div>
     );
+
 };
 
 

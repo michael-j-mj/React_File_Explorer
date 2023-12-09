@@ -32,17 +32,7 @@ const FileExplorerButtons = ({
 
             </button>
         </div>
-        <div className='col-3'>
-            <button
-                className="btn btn-danger btn-sm"
-                onClick={handleDelete}
-                data-bs-toggle="tooltip"
-                data-bs-placement="bottom"
-                title="Delete"
-            >
-                <i className="bi bi-trash"></i>
-
-            </button>
+        <div className='col-2'>
             <button
                 className="btn btn-secondary btn-sm"
                 onClick={() => handleRename()}
@@ -53,6 +43,7 @@ const FileExplorerButtons = ({
                 <i className="bi bi-pencil"></i>
 
             </button>
+
         </div>
         <div className='col-5  '>
             <button
@@ -84,6 +75,16 @@ const FileExplorerButtons = ({
                 <i className="bi bi-clipboard-plus"></i>
             </button>
         </div>
+        <div className='col-2'>
+            <button
+                className="btn btn-danger btn-sm"
+                onClick={handleDelete}
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Delete">
+                <i className="bi bi-trash"></i>
+
+            </button></div>
     </div>);
 }
 
