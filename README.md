@@ -1,3 +1,47 @@
+## Live Deployment -- https://wonderful-pond-075d09710.4.azurestaticapps.net/
+
+## Features
+File Operations:
+
+Create new files or folders
+Rename files or folders
+Delete files or folders
+Copy, cut, and paste files or folders
+Automatic state restoration on the next visit
+Search:
+
+Utilize the search bar to find files and folders by name
+File Browsing:
+
+Supports txt, js, ts, and json file types
+View content of text files with syntax highlighting (if available)
+
+
+Certainly! Here's a section for your README.md where you can list future improvements or areas for enhancement:
+
+## To-Do / Future Improvements
+
+While the current version of the project fulfills the basic requirements, there are several areas that could be enhanced or extended if more time and resources were available. Consider the following improvements:
+
+1. **Enhanced UI:**
+   - Implement a touch-friendly user interface to match modern file explorers.
+   - Introduce dark mode for improved user experience in low-light environments.
+
+2. **Migration to TypeScript:**
+   - Convert the codebase to TypeScript for improved static typing, better code quality, and enhanced development tooling.
+
+3. **Testing Coverage:**
+   - Expand the test suite to cover more components, features, and edge cases.
+   - Integrate additional testing libraries or tools for comprehensive test coverage.
+
+4. **Tabbed File Explorer:**
+   - Introduce a tabbed interface to the file explorer, allowing users to quickly switch between opened files.
+   - Enhance user productivity by providing a seamless multi-file editing experience.
+
+5. **Performance Optimization:**
+   - Identify and implement performance optimizations to ensure a smooth and responsive user experience, especially when dealing with a large number of files.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
