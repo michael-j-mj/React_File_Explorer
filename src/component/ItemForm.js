@@ -17,7 +17,7 @@ const ItemForm = ({ files, editing, onSubmit, inputRef, onCancel, item }) => {
             handleCancel();
             return;
         }
-
+        console.log(files);
         if (parentId != null && files[parentId].children.some(childId =>
             files[childId].title === itemName && (!item || item.id !== childId)
         )) {

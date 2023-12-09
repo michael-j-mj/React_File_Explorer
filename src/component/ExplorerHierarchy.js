@@ -1,5 +1,5 @@
 import React from 'react';
-import FileItem from './FileItem';
+import FileItem from './FileItemDisplay';
 import ItemForm from './ItemForm';
 
 const ExplorerHierarchy = ({

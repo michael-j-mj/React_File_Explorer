@@ -2,7 +2,7 @@ import React from 'react';
 import { render, waitFor, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import Explorer from '../features/explorer/Explorer';
+import Explorer from '../features/explorer/ExplorerOverview';
 import userEvent from '@testing-library/user-event';
 import { addFiles, deleteItem } from '../redux/fileSystemSlices';
 

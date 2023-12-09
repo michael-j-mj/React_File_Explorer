@@ -81,7 +81,9 @@ const Explorer = () => {
         }
     };
     const handleFileMove = (type) => {
-        setTransferId({ id: selectedId, type: type });
+        if (selectedId != 0) {
+            setTransferId({ id: selectedId, type: type });
+        }
     }
     const handlePaste = () => {
         if (transferId.type == "move" && transferId.id === selectedId) { //moving to it self

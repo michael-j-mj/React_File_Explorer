@@ -1,5 +1,5 @@
 import React from 'react';
-import FileItem from './FileItem';
+import FileItem from './FileItemDisplay';
 
 const SearchResults = ({ files, searchTerm, selectedId, handleSearchItemClick }) => {
     // Convert the files object to an array

@@ -10,12 +10,11 @@ const initialState = {
       type: 'folder-root',
       parentId: null,
       content: null,
-      children: [1, 2], // Array of children IDs
+      children: [], // Array of children IDs
     }
   }
 
 };
-
 
 export const fileSystemSlice = createSlice({
   name: 'filesSystem',
@@ -165,7 +164,7 @@ const getInitialContent = (fileName) => {
   if (fileName.endsWith('.txt')) {
     return 'test';
   } else if (fileName.endsWith('.js') || fileName.endsWith('.ts')) {
-    return "";
+    return "console.log('hello world);";
   } else if (fileName.endsWith('.json')) {
     return '{}';
   } else {

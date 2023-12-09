@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import './styles/App.css';
 import FileEditor from './features/FileEditor/FileEditor';
-import Explorer from './features/explorer/Explorer';
+import Explorer from './features/explorer/ExplorerOverview';
 
 
 function App() {
