@@ -54,7 +54,7 @@ const FileExplorerButtons = ({
                 data-bs-toggle="tooltip"
                 data-bs-placement="bottom"
                 title="Copy"
-                disabled={selectedId == 0}
+                disabled={selectedId === 0}
             >
                 <i className="bi bi-files"></i>
             </button>
@@ -64,7 +64,7 @@ const FileExplorerButtons = ({
                 data-bs-toggle="tooltip"
                 data-bs-placement="bottom"
                 title="Cut"
-                disabled={selectedId == 0}
+                disabled={selectedId === 0}
             >
                 <i className="bi bi-scissors"></i>
             </button>
@@ -85,7 +85,7 @@ const FileExplorerButtons = ({
                 onClick={handleDelete}
                 data-bs-toggle="tooltip"
                 data-bs-placement="bottom"
-                disabled={selectedId == 0}
+                disabled={selectedId === 0}
                 title="Delete">
                 <i className="bi bi-trash"></i>
 
