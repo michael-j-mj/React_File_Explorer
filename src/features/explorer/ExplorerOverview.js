@@ -131,6 +131,7 @@ const Explorer = () => {
                     handleFileMove={handleFileMove}
                     handlePaste={handlePaste}
                     transferId={transferId}
+                    selectedId={selectedId}
                 />
             </div>
             <div className='file-container'>
