@@ -20,24 +20,25 @@ const FileEditor = () => {
         // Dispatch the changeContent action with updated content
         dispatch(changeContent({ id: currentFileId, content: content }));
     };
+    let errorMSg = '';
 
     if (!currentFile) {
-        return (
-            <div className="bg-light p-3" style={{ height: '100%' }}>
-                <p>No file selected.</p>
-            </div>
-        );
+        errorMSg = "NO FILE SELECTED";
+    } else if (!/(\.txt|\.js|\.ts|\.json)$/.test(currentFile.title)) {
+        errorMSg = "INVALID FILE TYPE SELECTED"
     }
 
     return (
         <div className="bg-light p-3" style={{ height: '100%' }}>
-            <h1>{currentFile.title}</h1>
-            <textarea
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-                onBlur={handleChange}
-                style={{ width: '100%', height: '80vh' }} // Adjust height as needed
-            />
+            <h1 className='py-3'>{currentFile ? currentFile.title : ""}</h1>
+            {errorMSg != "" ? <p>{errorMSg}</p> :
+                <textarea
+                    value={content}
+                    onChange={(e) => setContent(e.target.value)}
+                    onBlur={handleChange}
+                    style={{ width: '100%', height: '80vh' }} // Adjust height as needed
+                />
+            }
         </div>
     );
 };
